@@ -28,8 +28,9 @@ export default function Home() {
         } else {
           detector = await window.ai.languageDetector.create({
             monitor(monitorEvent) {
-              monitorEvent.addEventListener('downloadprogress', (e: any) => {
-                console.log(`Downloaded ${e.loaded} of ${e.total} bytes.`);
+              monitorEvent.addEventListener('downloadprogress', (e: Event) => {
+                const progressEvent = e as ProgressEvent;
+                console.log(`Downloaded ${progressEvent.loaded} of ${progressEvent.total} bytes.`);
               });
             },
           });
@@ -65,6 +66,7 @@ export default function Home() {
       return text.length > 100 ? text.substring(0, 100) + '...' : text;
     }
   }
+
   async function translateTextClient(text: string, targetLang: string): Promise<string> {
     if (window.ai && window.ai.translator && typeof window.ai.translator.translate === 'function') {
       try {
@@ -79,7 +81,6 @@ export default function Home() {
       return `${text} [translated to ${targetLang}]`;
     }
   }
-  
 
   // Handlers
   const handleSend = async () => {
