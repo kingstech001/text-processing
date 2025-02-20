@@ -7,7 +7,7 @@ import InputArea from './InputArea';
 
 export default function ChatWindow(props: ChatWindowProps) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto p-[10px]">
       {/* Chat output area */}
       <div className="p-4 mb-4 h-[70vh] overflow-y-auto py-[30px]">
         <OutputArea 
