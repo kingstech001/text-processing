@@ -112,7 +112,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white m-[4px]">
       <ChatWindow
         inputText={inputText}
         setInputText={setInputText}

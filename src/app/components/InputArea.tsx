@@ -17,7 +17,7 @@ export default function InputArea({
   handleTranslate,
 }: InputAreaProps) {
   return (
-    <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[40px] p-4 m-4">
+    <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[40px] p-4 mb-[10px]">
       <div className="flex">
         <textarea
           value={inputText}
