@@ -17,7 +17,7 @@ export default function InputArea({
   handleTranslate,
 }: InputAreaProps) {
   return (
-    <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[40px] p-4">
+    <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] rounded-[40px] p-4 m-4">
       <div className="flex">
         <textarea
           value={inputText}
@@ -26,7 +26,7 @@ export default function InputArea({
           className="flex-1 p-2 border-gray-300 rounded focus:outline-none resize-none"
         />
       </div>
-      <div className="flex justify-between items-end mt-4">
+      <div className="flex justify-between items-end">
         <ActionButtons
           outputText={outputText}
           detectedLanguage={detectedLanguage}
